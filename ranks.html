@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رنک‌ها | CoinCraft</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-icon">⛏️</div>
+            <div class="loader-bar"></div>
+            <p>در حال بارگذاری CoinCraft...</p>
+        </div>
+    </div>
+
+    <div id="particles"></div>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">CoinCraft</span>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="gamemodes.html">گیم‌مودها</a></li>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="ranks.html" class="active">رنک‌ها</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" title="تغییر تم">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="animate-on-scroll">👑 رنک‌های CoinCraft</h1>
+            <p class="animate-on-scroll">با تهیه رنک، از امکانات ویژه‌ای بهره‌مند شو</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container animate-on-scroll">
+                <div class="search-box">
+                    <input type="text" id="search-ranks" placeholder="🔍 جستجوی رنک..." />
+                    <button class="btn btn-primary search-btn" id="search-ranks-btn">جستجو</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ranks-section">
+        <div class="container">
+            <div class="ranks-grid" id="ranks-grid"></div>
+        </div>
+    </section>
+
+    <!-- Rank Modal -->
+    <div id="rank-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <span class="modal-icon" id="rank-modal-icon">👑</span>
+                <h2 id="rank-modal-title">خرید رنک</h2>
+            </div>
+            <div class="modal-body">
+                <div id="rank-modal-details">
+                    <p><strong>رنک:</strong> <span id="rank-modal-name">-</span></p>
+                    <p><strong>قیمت:</strong></p>
+                    <div id="rank-modal-price"></div>
+                    <p><strong>وضعیت:</strong> <span id="rank-modal-status" class="in-stock">موجود ✅</span></p>
+                    <p><strong>امکانات:</strong></p>
+                    <ul id="rank-modal-features"></ul>
+                </div>
+                <div class="shop-modal-actions">
+                    <button class="btn btn-primary" id="rank-modal-buy">خرید رنک</button>
+                    <button class="btn btn-outline" id="rank-modal-close">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="logo">
+                    <span class="logo-icon">⛏️</span>
+                    <span class="logo-text">CoinCraft</span>
+                </div>
+                <p style="color: var(--text-muted); margin-top: 8px;">مدرن‌ترین شبکه Minecraft Java</p>
+                <p style="color: var(--text-muted); margin-top: 4px;">
+                    IP: <strong style="color: var(--gold);" class="footer-ip">coincraft.funserver.top</strong>
+                </p>
+            </div>
+            <div>
+                <h4>لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="gamemodes.html">گیم‌مودها</a></li>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="ranks.html">رنک‌ها</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>شبکه‌های اجتماعی</h4>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://u1a.ir/coincraft-Discord" class="social-link" data-social="discord" target="_blank" rel="noopener">
+                            <span class="social-icon discord-icon"></span>
+                            Discord
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" data-social="telegram" target="_blank" rel="noopener">
+                            <span class="social-icon telegram-icon"></span>
+                            Telegram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" data-social="youtube" target="_blank" rel="noopener">
+                            <span class="social-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://rubika.ir/coinscraft" class="social-link" data-social="robika" target="_blank" rel="noopener">
+                            <img src="https://cdn.imgurl.ir/uploads/l565417_minimal-gray.png"
+                                 alt="روبیکا"
+                                 class="social-icon-img"
+                                 width="24"
+                                 height="24" />
+                            روبیکا
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; ۲۰۲۶ CoinCraft. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <div id="event-notification" class="event-notif hidden">
+        <span class="event-icon">🎉</span>
+        <span class="event-text">رویداد جدید: مسابقه PvP</span>
+        <button class="event-close" id="event-close">✕</button>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="بازگشت به بالا">⬆</button>
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

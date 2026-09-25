@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinCraft | Minecraft Java Network</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div id="particles"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">CoinCraft</span>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">خانه</a></li>
+                    <li><a href="gamemodes.html">گیم‌مودها</a></li>
+                    <li><a href="shop.html">شاپ</a></li>
+                    <li><a href="ranks.html">رنک‌ها</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" title="تغییر تم">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">⚡ Minecraft Java Network</div>
+            <h1 class="hero-title">CoinCraft</h1>
+            <p class="hero-sub">ماجراجویی بی‌پایان در دنیای مکعب‌ها</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="status-dot checking" id="status-dot"></span>
+                    <span id="server-status">در حال بررسی...</span>
+                </div>
+                <div class="stat-item">
+                    <span>👥</span>
+                    <span id="player-count">در حال بررسی...</span>
+                </div>
+            </div>
+            <div class="hero-ip">
+                <span id="server-ip">coincraft.funserver.top</span>
+                <button class="btn-copy" id="copy-ip-btn">📋 کپی</button>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="start-playing-btn">🎮 شروع بازی</button>
+                <a href="shop.html" class="btn btn-secondary">🛒 فروشگاه</a>
+                <a href="gamemodes.html" class="btn btn-outline">🎮 گیم‌مودها</a>
+                <a href="ranks.html" class="btn btn-outline">👑 رنک‌ها</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== START PLAYING MODAL ===== -->
+    <div id="start-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <span class="modal-icon"></span>
+                <h2>اتصال به سرور CoinCraft</h2>
+            </div>
+            <div class="modal-body">
+                <div class="connect-info">
+                    <p><strong>نسخه:</strong> Minecraft Java Edition</p>
+                    <div class="connect-ip">
+                        <span>آدرس سرور:</span>
+                        <strong id="modal-server-ip">coincraft.funserver.top</strong>
+                        <button class="btn-copy" id="modal-copy-btn">📋 کپی</button>
+                    </div>
+                    <p class="connect-tip">💡 آدرس را کپی کرده و در Minecraft وارد کنید</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SEARCH SECTION ===== -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container animate-on-scroll">
+                <div class="search-box">
+                    <input type="text" id="search-home" placeholder="🔍 جستجو در سایت..." />
+                    <button class="btn btn-primary search-btn" id="search-home-btn">جستجو</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">✨ امکانات CoinCraft</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚡</div>
+                    <h3>عملکرد مناسب</h3>
+                    <p>تلاش برای ارائه تجربه‌ای روان و پایدار برای تمام بازیکنان</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>امنیت بالا</h3>
+                    <p>سیستم ضدحک و محافظت از اطلاعات بازیکنان با استانداردهای روز</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🎮</div>
+                    <h3>گیم‌مودهای متنوع</h3>
+                    <p>از Survival تا BedWars و SkyBlock، هر سلیقه‌ای پوشش داده شده</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">👑</div>
+                    <h3>سیستم رنکینگ</h3>
+                    <p>رنک‌های اختصاصی با امکانات ویژه و رنگ‌های منحصربه‌فرد</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== POPULAR GAMEMODES ===== -->
+    <section class="popular-gamemodes">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">🔥 گیم‌مودهای محبوب</h2>
+            <div class="gamemodes-preview">
+                <div class="gm-preview-card animate-on-scroll">
+                    <div class="gm-preview-icon">🌲</div>
+                    <h4>Survival</h4>
+                    <p>گیم مود فعال🔵</p>
+                </div>
+                <div class="gm-preview-card animate-on-scroll">
+                    <div class="gm-preview-icon">⚔️</div>
+                    <h4>BedWars</h4>
+                    <p class="coming-soon">به زودی</p>
+                </div>
+                <div class="gm-preview-card animate-on-scroll">
+                    <div class="gm-preview-icon">🏝️</div>
+                    <h4>SkyBlock</h4>
+                    <p class="coming-soon">به زودی</p>
+                </div>
+                <div class="gm-preview-card animate-on-scroll">
+                    <div class="gm-preview-icon">🥊</div>
+                    <h4>Practice PvP</h4>
+                    <p class="coming-soon">به زودی</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="gamemodes.html" class="btn btn-secondary">مشاهده همه گیم‌مودها</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="animate-on-scroll">آماده‌ای برای ماجراجویی؟</h2>
+            <p class="animate-on-scroll">همین حالا به CoinCraft بپیوند و تجربه‌ای بی‌نظیر از Minecraft داشته باش.</p>
+            <button class="btn btn-primary animate-on-scroll" id="cta-start-btn">🎮 شروع بازی</button>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="logo">
+                    <span class="logo-icon"></span>
+                    <span class="logo-text">CoinCraft</span>
+                </div>
+                <p style="color: var(--text-muted); margin-top: 8px;">مدرن‌ترین شبکه Minecraft Java</p>
+                <p style="color: var(--text-muted); margin-top: 4px;">
+                    IP: <strong style="color: var(--gold);" class="footer-ip">coincraft.funserver.top</strong>
+                </p>
+            </div>
+            <div>
+                <h4>لینک‌های سریع</h4>
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="gamemodes.html">گیم‌مودها</a></li>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="ranks.html">رنک‌ها</a></li>                  
+                </ul>
+            </div>
+            <div>
+                <h4>شبکه‌های اجتماعی</h4>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://discord.gg/5mBRcRU9w" class="social-link" data-social="discord" target="_blank" rel="noopener">
+                            <span class="social-icon discord-icon"></span>
+                            Discord
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" data-social="telegram" target="_blank" rel="noopener">
+                            <span class="social-icon telegram-icon"></span>
+                            Telegram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link" data-social="youtube" target="_blank" rel="noopener">
+                            <span class="social-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://rubika.ir/coinscraft" class="social-link" data-social="robika" target="_blank" rel="noopener">
+                            <img src="https://cdn.imgurl.ir/uploads/l565417_minimal-gray.png"
+                                 alt="روبیکا"
+                                 class="social-icon-img"
+                                 width="24"
+                                 height="24" />
+                            روبیکا
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; ۲۰۲۶ CoinCraft. تمامی حقوق محفوظ است.</p>
+        </div>
+    </footer>
+
+    <!-- ===== EVENT NOTIFICATION ===== -->
+    <div id="event-notification" class="event-notif hidden">
+        <span class="event-icon">🎉</span>
+        <span class="event-text">رویداد جدید: مسابقه PvP</span>
+        <button class="event-close" id="event-close">✕</button>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="back-to-top" class="back-to-top" aria-label="بازگشت به بالا">⬆</button>
+
+    <!-- ===== TOAST ===== -->
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
